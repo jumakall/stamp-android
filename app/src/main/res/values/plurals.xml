@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="granting_stamps_with_details">
+        <item quantity="one">Granting %d stamp for %s to:</item>
+        <item quantity="other">Granting %d stamps for %s to:</item>
+    </plurals>
+    <plurals name="granted_stamps_with_details">
+        <item quantity="one">Granted %d stamp for %s to:</item>
+        <item quantity="other">Granted %d stamps for %s to:</item>
+    </plurals>
+    <plurals name="granted_stamps_with_details_failed">
+        <item quantity="one">Failed to grant %d stamp for %s to:</item>
+        <item quantity="other">Failed to grant %d stamps for %s to:</item>
+    </plurals>
+
+    <plurals name="max_stamps">
+        <item quantity="one">max %d stamp</item>
+        <item quantity="other">max %d stamps</item>
+    </plurals>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/vendorPassesFragment">
+
+    <fragment
+        android:id="@+id/vendorPassesFragment"
+        android:name="com.stamp.VendorPassesFragment"
+        android:label="fragment_vendor_passes"
+        tools:layout="@layout/fragment_vendor_passes" >
+        <action
+            android:id="@+id/action_vendorPassesFragment_to_vendorGrantFragment"
+            app:destination="@id/vendorGrantFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vendorGrantFragment"
+        android:name="com.stamp.VendorGrantFragment"
+        android:label="VendorGrantFragment" >
+        <action
+            android:id="@+id/action_vendorGrantFragment_to_scannerFragment"
+            app:destination="@id/scannerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scannerFragment"
+        android:name="com.stamp.ScannerFragment"
+        android:label="ScannerFragment" >
+        <action
+            android:id="@+id/action_scannerFragment_to_vendorCommitFragment"
+            app:destination="@id/vendorCommitFragment"
+            app:popUpTo="@+id/vendorPassesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vendorCommitFragment"
+        android:name="com.stamp.VendorCommitFragment"
+        android:label="VendorCommitFragment"/>
+</navigation>

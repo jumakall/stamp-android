@@ -1,0 +1,75 @@
+<resources>
+    <!-- GLOBAL -->
+    <string name="app_name">Stamp</string>
+
+    <!-- SHARED PREFERENCES -->
+    <string name="preferences_file_key">preferences</string>
+    <string name="saved_api_token">api_token</string>
+    <string name="saved_name">name</string>
+    <string name="saved_is_vendor">is_vendor</string>
+    <string name="saved_code">code</string>
+
+    <!-- PERMISSIONS -->
+    <string name="grant_permission">Grant</string>
+    <string name="camera_permission_required">The camera permission is required to scan codes.</string>
+
+    <!-- ==========NEW STUFF========== -->
+    <!-- Vendor -->
+    <string name="vendor_grant_stamps_title">Grant stamps</string>
+    <string name="vendor_grant_stamps_step_1">Step 1: Select pass</string>
+    <string name="vendor_grant_stamps_step_2">Step 2: Select amount of stamps to grant</string>
+    <string name="vendor_grant_stamps_step_4">Step 4: Finalize</string>
+
+    <string name="apply_preset">Apply preset</string>
+    <string name="selected_pass">Pass:</string>
+
+    <string name="close">Close</string>
+
+    <!-- Pass -->
+    <string name="stampsWithMax">%d/%d</string>
+
+    <!-- ==========OLD STUFF========== -->
+
+    <!-- SPLASH -->
+    <string name="splash_title">Welcome to STAMP!</string>
+    <string name="splash_slogan">Say goodbye to physical cards</string>
+    <string name="splash_continue">Continue</string>
+
+    <!-- VENDOR MAIN -->
+    <string name="vendor_title">Stamper</string>
+    <string name="vendor_up_arrow">+</string>
+    <string name="vendor_down_arrow">-</string>
+    <string name="vendor_scan_code">Confirm - Scan code</string>
+
+    <!-- PASSES FRAGMENT -->
+    <string name="fragment_passes_empty">No active passes.</string>
+
+    <!-- CARDS FRAGMENT -->
+    <string name="fragment_cards_empty">No cards added.</string>
+
+    <!-- VENDOR SCAN CODE -->
+    <string name="scanner_top_bar_description">Text background to increase contrast.</string>
+
+    <!-- BOTTOM NAVIGATION -->
+    <string name="main_bottom_navigation_passes">Passes</string>
+    <string name="main_bottom_navigation_code">Code</string>
+    <string name="main_bottom_navigation_cards">Cards</string>
+
+    <!-- ACTIONS -->
+    <string name="action_logout">Logout</string>
+
+    <!-- MAIN -->
+
+    <!-- DISPLAY CODE -->
+    <string name="display_code_title">Your personal code</string>
+    <string name="display_code_description">Show this code at cash desk to collect stamps from your purchases.</string>
+    <string name="code_description">Personal code</string>
+
+    <!-- LOGIN -->
+    <string name="login_title">Sign in to Stamp</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="login_failed">Login failed</string>
+</resources>

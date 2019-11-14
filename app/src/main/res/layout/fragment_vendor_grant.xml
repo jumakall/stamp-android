@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- todo: broken in landscape -->
+
+    <data>
+        <variable
+            name="stamp"
+            type="com.stamp.viewModel.StampViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/grantStampsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vendor_grant_stamps_title"
+            android:textAppearance="@style/AppTheme.Header1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vendor_grant_stamps_step_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/grantStampsTitle" />
+
+        <TextView
+            android:id="@+id/textStampAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@{String.valueOf(stamp.amount)}"
+            android:textAppearance="@style/AppTheme.IntegerSelector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1" />
+
+        <Button
+            android:id="@+id/buttonStampAmountUp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/vendor_up_arrow"
+            app:layout_constraintBottom_toTopOf="@+id/buttonStampAmountDown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textStampAmount"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/buttonStampAmountDown"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vendor_down_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/buttonStampAmountUp"
+            app:layout_constraintStart_toEndOf="@+id/textStampAmount"
+            app:layout_constraintStart_toStartOf="@+id/buttonStampAmountUp"
+            app:layout_constraintTop_toBottomOf="@+id/buttonStampAmountUp" />
+
+        <Button
+            android:id="@+id/buttonStampAmountPresetOne"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonStampAmountPresetTwo"
+            app:layout_constraintEnd_toStartOf="@+id/buttonStampAmountPresetTwo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/buttonStampAmountPresetTwo"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="2" />
+
+        <Button
+            android:id="@+id/buttonStampAmountPresetTwo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonContinue"
+            app:layout_constraintEnd_toStartOf="@+id/buttonStampAmountPresetThree"
+            app:layout_constraintStart_toEndOf="@+id/buttonStampAmountPresetOne"
+            app:layout_constraintTop_toBottomOf="@+id/textVendorTitle"
+            tools:text="3" />
+
+        <Button
+            android:id="@+id/buttonStampAmountPresetThree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonStampAmountPresetTwo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonStampAmountPresetTwo"
+            app:layout_constraintTop_toTopOf="@+id/buttonStampAmountPresetTwo"
+            tools:text="5" />
+
+        <Button
+            android:id="@+id/buttonContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/vendor_scan_code"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textVendorTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/apply_preset"
+            app:layout_constraintBottom_toTopOf="@+id/buttonStampAmountPresetTwo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textStampAmount"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/passText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/selected_pass"
+            app:layout_constraintBaseline_toBaselineOf="@+id/passChip"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/passChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@{stamp.pass.name}"
+            app:layout_constraintStart_toEndOf="@+id/passText"
+            app:layout_constraintTop_toBottomOf="@+id/firstDivider"
+            tools:text="Sample Pass" />
+
+        <View
+            android:id="@+id/firstDivider"
+            android:layout_width="395dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionText" />
+
+        <View
+            android:id="@+id/secondDivider"
+            android:layout_width="395dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passChip" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

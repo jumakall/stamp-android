@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="pass"
+            type="com.stamp.model.Pass" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:color/holo_blue_dark"/>
+
+        <ImageView
+            android:id="@+id/bottomBar"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:alpha="0.7"
+            app:layout_constraintBottom_toBottomOf="@+id/background"
+            app:layout_constraintEnd_toEndOf="@+id/background"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/background"
+            app:srcCompat="@android:color/black" />
+
+        <TextView
+            android:id="@+id/passName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@{pass.name}"
+            android:textAppearance="@style/AppTheme.CameraNotice"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomBar"
+            app:layout_constraintStart_toStartOf="@+id/bottomBar"
+            app:layout_constraintTop_toTopOf="@+id/bottomBar"
+            tools:text="Sample Pass" />
+
+        <TextView
+            android:id="@+id/stampCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/AppTheme.CameraNotice"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomBar"
+            app:layout_constraintEnd_toEndOf="@+id/bottomBar"
+            app:layout_constraintTop_toTopOf="@+id/bottomBar"
+            tools:text="5/10"
+            app:stampCount="@{pass}"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
