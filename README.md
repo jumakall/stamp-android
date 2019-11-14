@@ -1,3 +1,5 @@
 # Stamp Android
 
-Apparently the project needs a few fixes before it's ready to be published, it will be here soon!
+Android application for the digital stamp card service.
+
+README will be updated shortly.
