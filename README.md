@@ -11,5 +11,8 @@ Instruct the app to use the correct API server by modifying the ``BASE_URL`` var
 
 :exclamation:WARNING:exclamation: Never use HTTP over internet, since all traffic will be transmitted as cleartext, including passwords.
 
+### Sentry integration
+The project has everything setup for Sentry integration, all you need to do is to provide Sentry DSN. Find the ``sentry.properties.example`` file, make a copy of it to the same directory with the name ``sentry.properties`` and add your Sentry DSN to that file.
+
 ## Dealing with unimplemented features
 Some relevant features are not yet implemented, like user registration and pass creation. Those can be circumvented by crafting a proper API requests and sending them to the API server. More about how the requests should be constructed in the [API server](https://github.com/jumakall/stamp-api) repository.
